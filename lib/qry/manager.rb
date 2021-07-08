@@ -46,7 +46,7 @@ module Qry
 
     def fetch_table_names
       sql = <<~SQL
-        select t.table_name
+        select t.table_name as table_name
         from information_schema.tables t
         where t.table_schema = ?
       SQL
